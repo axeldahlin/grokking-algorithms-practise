@@ -1,12 +1,14 @@
 function sum(arr) {
-    if (arr.length === 0) {
-        return 0;
+    if (arr.length == 1) {
+        return arr[0];
     } else {
-        return arr.splice(0, 1) + sum(arr);
+        const item = arr.splice(0, 1);
+        
+        return Number(item) + Number(sum(arr));
     }
 }
 
-
-const array = [1, 4, 5];
+const array = [2, 4, 6, -6, 4, 1000, -10];
 
 console.log(sum(array));
+
