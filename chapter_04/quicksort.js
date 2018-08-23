@@ -8,7 +8,6 @@ function quickSort(arr) {
 
 		const less = [];
 		const greater = [];
-	
 
 		for (let i = 0; i < arr.length; i++) {
 			if (arr[i] > pivot) {
@@ -20,6 +19,5 @@ function quickSort(arr) {
 		return quickSort(less).concat(pivot).concat(quickSort(greater));
 	}
 }
-
 const test = quickSort([3, 5, 2, 1, 4, -10, 100, 54, 22, 63, 2, 3, 64, -1, -3, 142, 43, 7, 0]);
 console.log(test);
